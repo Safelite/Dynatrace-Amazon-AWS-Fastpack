@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <title>Amazon AWS Fastpack</title>
 
@@ -248,4 +248,4 @@ Download and install the Fastpack to your dynaTrace Server    </p>
         </div>
     </div>
 </body>
-</html>
+
