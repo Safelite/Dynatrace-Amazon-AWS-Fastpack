@@ -12,24 +12,7 @@
 
 <ul class="toc">
 </ul>
-<div>
-            </div>
-            <div>
-            <div id="77922354" class="content column span-18 last">
-                <h1>Amazon AWS Fastpack</h1>
-    <div class="section-2"  id="77922354_AmazonAWSFastpack-Overview"  >
-        <h2>Overview</h2>
-    
-    <div class="section-3"  id="77922354_AmazonAWSFastpack-AmazonAWSFastpack"  >
-        <h3>Amazon AWS Fastpack</h3>
-    
-    <p>
-            <img src="images_community/download/attachments/77922354/icon.png" alt="images_community/download/attachments/77922354/icon.png" class="confluence-embedded-image" />
-        The dynaTrace FastPack for Amazon AWS enables easy out-of-the-box monitoring of various AWS solutions via Cloud Watch. The Fastpack consists of a customer Monitor, several Dashboards and a System Profile.    </p>
-    <p>
-    </p>
-    <div class="confbox admonition admonition-note">
-        
+
     <p>
 This Fastpack is for dynaTrace 4.2 and contains new features. for older dynaTrace versions please look for the <a href="https://community/display/DL/Amazon+EC2+FastPack">Amazon EC2 FastPack</a>    </p>
     </div>
