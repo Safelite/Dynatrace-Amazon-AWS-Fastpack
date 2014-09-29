@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Amazon AWS Fastpack</title>
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
     <meta content="Scroll Wiki Publisher" name="generator"/>
-
     <link type="text/css" rel="stylesheet" href="css/blueprint/liquid.css" media="screen, projection"/>
     <link type="text/css" rel="stylesheet" href="css/blueprint/print.css" media="print"/>
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"/><![endif]-->
-
     <link type="text/css" rel="stylesheet" href="css/content-style.css" media="screen, projection, print"/>
     <link type="text/css" rel="stylesheet" href="css/screen.css" media="screen, projection"/>
     <link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
@@ -27,7 +21,6 @@
                 <h4>Amazon AWS Fastpack</h4>
             </div>
         </div>
-
         <div class="block">
             <div class="toc column span-6 prepend-top">
                 <h3>Table of Contents
@@ -36,7 +29,6 @@
                 
 <ul class="toc">
 </ul>
-
             </div>
             <div id="77922354" class="content column span-18 last">
                 <h1>Amazon AWS Fastpack</h1>
@@ -244,6 +236,9 @@ Download and install the Fastpack to your dynaTrace Server    </p>
 </li></ol>    </div>
     
             </div>
+        </div>
+        <div class="footer">
+            Created with <a href="http://k15t.com/display/en/Scroll-Wiki-HTML-Exporter-for-Confluence-Overview">Scroll Wiki HTML Exporter for Confluence</a>.
         </div>
     </div>
 </body>
