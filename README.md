@@ -9,23 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
 </head>
 <body>
-    <div class="container" style="min-width: 760px;">
-        <div class="header block">
-            <div class="header-left column span-6">
-                
-            </div>
-            <div class="column span-18 header-right last">
-                <h4>Amazon AWS Fastpack</h4>
-            </div>
-        </div>
-      </div>
-<div>
-        <div class="block">
-            <div class="toc column span-6 prepend-top">
-                <h3>Table of Contents
-                                        <span class="small">(<a href="Amazon_AWS_Fastpack.html">Start</a>)</span>
-                                    </h3>
-                
+
 <ul class="toc">
 </ul>
 <div>
