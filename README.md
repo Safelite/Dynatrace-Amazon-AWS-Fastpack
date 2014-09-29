@@ -23,7 +23,6 @@
             <div class="toc column span-6 prepend-top">
 <ul class="toc">
 </ul>
-    <p>
 This Fastpack is for dynaTrace 4.2 and contains new features. for older dynaTrace versions please look for the <a href="https://community/display/DL/Amazon+EC2+FastPack">Amazon EC2 FastPack</a>    </p>
     </div>
     </div>
