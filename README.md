@@ -197,9 +197,6 @@ Download and install the Fastpack to your dynaTrace Server    </p>
 </li></ol>    </div>
             </div>
         </div>
-        <div class="footer">
-            Created with <a href="http://k15t.com/display/en/Scroll-Wiki-HTML-Exporter-for-Confluence-Overview">Scroll Wiki HTML Exporter for Confluence</a>.
-        </div>
     </div>
 </body>
 </html>
