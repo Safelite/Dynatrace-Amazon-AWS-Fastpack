@@ -12,13 +12,8 @@
 
 <ul class="toc">
 </ul>
-
-    <p>
+ <p>
 This Fastpack is for dynaTrace 4.2 and contains new features. for older dynaTrace versions please look for the <a href="https://community/display/DL/Amazon+EC2+FastPack">Amazon EC2 FastPack</a>    </p>
-
-    <div class="section-2"  id="77922354_AmazonAWSFastpack-FastPackDetails"  >
-        <h2>Fast Pack Details</h2>
-    
     <div class="tablewrap">
         <table>
 <thead class=" "></thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
