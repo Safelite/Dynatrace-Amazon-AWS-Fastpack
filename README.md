@@ -23,11 +23,6 @@
             <div class="toc column span-6 prepend-top">
 <ul class="toc">
 </ul>
-        <div>    </div> <p>
-        The dynaTrace FastPack for Amazon AWS enables easy out-of-the-box monitoring of various AWS solutions via Cloud Watch. The Fastpack consists of a customer Monitor, several Dashboards and a System Profile.    </p>
-    <p>
-    </p>
-    <div class="confbox admonition admonition-note">
     <p>
 This Fastpack is for dynaTrace 4.2 and contains new features. for older dynaTrace versions please look for the <a href="https://community/display/DL/Amazon+EC2+FastPack">Amazon EC2 FastPack</a>    </p>
     </div>
