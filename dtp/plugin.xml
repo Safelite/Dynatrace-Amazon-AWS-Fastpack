@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension id="Installer Content" point="com.dynatrace.diagnostics.InstallerContent">
+     <metainfo installer_type="resourcepack" name="Amazon Cloud Fastpack" >
+		 <!--resource resource="dashboards/HDFS (NameNode) Statistics.dashboard.xml" resource_type="dashboard"/>
+		 <resource resource="dashboards/MapReduce Jobs.dashboard.xml" resource_type="dashboard"/>
+		 <resource resource="profiles/mapreduce.profile.xml" resource_type="systemProfile"/-->
+
+		 <resource resource="plugins/com.dynatrace.diagnostics.plugin.cloud.amazon.jar" resource_type="userPlugin" />
+	</metainfo>
+   </extension>
+</plugin>

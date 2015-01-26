@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="4.2.0.3043" date="4/6/12 11:04 AM">
+  <dashboardconfig memento.version="4.2.0.3043" icon="com.dynatrace.diagnostics.sdk/default.gif" localizationenabled="false" sessiontype="live" locationassource="false" groupname="" authorname="mkopp" opendrilldowninnewdashboard="false" sessionid="Amazon Cloud" modified="1970-01-01T01:00:00+0100" id="3cefd7d3-9143-434c-9516-fb1e8c87ac41" revision="00000000-0000-0000-8c37-97d80d6feda2" source="server://mkopp" created="2012-04-06T11:04:06+0200" description="" name="Amazon RDS" modifiedbyname="mkopp" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" optimizeequalcolumns="true" type="PDF" title="" override="false" levels.per.tree="10" description="" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" print.images="true" />
+    <filter>
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="dcrumdimension" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe start="0" type="Auto" end="9223372036854775807" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset visitsidsetsize="0" />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@1d1ed0b" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="ee616437-c539-4794-981c-a2b59c03830d">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.24975514" folderid="org.eclipse.ui.internal.ViewStack@10337f0" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1d1ed0b" portletconfigorder="9f6dc74b-ee6d-4897-ac3c-892b5d86e469">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.24934725" folderid="org.eclipse.ui.internal.ViewStack@4836e3" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@10337f0" portletconfigorder="f6dd7f3f-f234-4055-850d-ea457394a4af">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.4850223" folderid="org.eclipse.ui.internal.ViewStack@cef90a" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@4836e3" portletconfigorder="be01f101-d302-4ae9-92ea-a1e47552d0b5">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.5026087" folderid="org.eclipse.ui.internal.ViewStack@12dabe3" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@cef90a" portletconfigorder="3eecdff9-09fa-4b86-8576-af26573886c7">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.63366336" folderid="org.eclipse.ui.internal.ViewStack@e4f461" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@12dabe3" portletconfigorder="68ae2d85-ae48-44e8-8b39-728786cadf0f">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.49913043" folderid="folder" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@4836e3" portletconfigorder="dab25214-adf1-48ca-af51-cef6f7b8740e">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.7858509" folderid="org.eclipse.ui.internal.ViewStack@37e639" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@10337f0" portletconfigorder="f309f2ec-6917-4990-98bd-721e72179ea6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.5" folderid="org.eclipse.ui.internal.ViewStack@4d64c5" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@37e639" portletconfigorder="07474ad9-c9f4-4433-b892-78a8020b8a54">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@10337f0" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="9f6dc74b-ee6d-4897-ac3c-892b5d86e469" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="CPU Utilization" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="f30ec31b-b3a8-453a-bb60-da580f3da016" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="CPUUtilization" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="CPUUtilization" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="CPUUtilization" metrickeyid="CPUUtilization" agentname="Amazon Instance Monitor" metricsimpledisplayname="CPUUtilization" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="percent" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="1063" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@cef90a" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="be01f101-d302-4ae9-92ea-a1e47552d0b5" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Average Latency per Operation" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="" id="cd20f143-18a7-4b2a-8b87-5b4e34dbfe77" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="WriteLatency" sourcecolor="RGB(17,76,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="s" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="WriteLatency" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="WriteLatency" metrickeyid="WriteLatency" agentname="Amazon Instance Monitor" metricsimpledisplayname="WriteLatency" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="s" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="" id="89c41f46-36a0-4748-ba34-d88927faac59" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="ReadLatency" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="s" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="ReadLatency" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="ReadLatency" metrickeyid="ReadLatency" agentname="Amazon Instance Monitor" metricsimpledisplayname="ReadLatency" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="s" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="1063" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="folder" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="dab25214-adf1-48ca-af51-cef6f7b8740e" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Average Throughput" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="megabytes" id="a9376869-6241-4c4e-bd31-6005ab70d3f4" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="WriteThroughput" sourcecolor="RGB(17,76,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="megabytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="WriteThroughput" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="WriteThroughput" metrickeyid="WriteThroughput" agentname="Amazon Instance Monitor" metricsimpledisplayname="WriteThroughput" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="bytes" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="megabytes" id="9f579a60-5729-456f-96b1-2ffdd89a4301" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="ReadThroughput" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="megabytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="ReadThroughput" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="ReadThroughput" metrickeyid="ReadThroughput" agentname="Amazon Instance Monitor" metricsimpledisplayname="ReadThroughput" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="bytes" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="241" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topRight" icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1d1ed0b" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" heightmode="UseBackgroundImageHeight" id="ee616437-c539-4794-981c-a2b59c03830d" addfilterinfo="false" source="server://mkopp" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="dynaTrace Amazon RDS Monitoring" description="" name="Text and Image" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="9" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="24" style="NORMAL" name="Arial" />
+      <image length="3824" offset="-1">
+        <chunk data="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" offset="0" />
+      </image>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@37e639" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="f309f2ec-6917-4990-98bd-721e72179ea6" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Connection" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="7" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="MeterChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingvalue="" id="123bcc97-9c1c-4306-8359-153a3aea6049" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="DatabaseConnections" sourcecolor="RGB(74,103,232,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DatabaseConnections" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="DatabaseConnections" metrickeyid="DatabaseConnections" agentname="Amazon Instance Monitor" metricsimpledisplayname="DatabaseConnections" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="number" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@4836e3" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="f6dd7f3f-f234-4055-850d-ea457394a4af" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Average I/O Operations per Second" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="number" groupingvalue="" id="30f6c1be-babb-4f00-ac3b-5a22f09017eb" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="ReadIOPS" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="ReadIOPS" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="ReadIOPS" metrickeyid="ReadIOPS" agentname="Amazon Instance Monitor" metricsimpledisplayname="ReadIOPS" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="number" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="number" groupingvalue="" id="c43bb2b9-ccd9-4754-8974-8d97500fb947" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="WriteIOPS" sourcecolor="RGB(17,76,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="WriteIOPS" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="WriteIOPS" metrickeyid="WriteIOPS" agentname="Amazon Instance Monitor" metricsimpledisplayname="WriteIOPS" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="number" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="241" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@4d64c5" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="07474ad9-c9f4-4433-b892-78a8020b8a54" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Replica Lag" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="8" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="MeterChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="s" groupingvalue="" id="02848b6d-cd6c-44ff-8235-80fba5069de8" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="ReplicaLag" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="s" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="ReplicaLag" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="ReplicaLag" metrickeyid="ReplicaLag" agentname="Amazon Instance Monitor" metricsimpledisplayname="ReplicaLag" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="s" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@12dabe3" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="3eecdff9-09fa-4b86-8576-af26573886c7" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Swap and Memory" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="MeterChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="bytes" groupingvalue="" id="1dab94f3-facb-4cef-938c-c152ecf8ffed" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="SwapUsage" sourcecolor="RGB(128,192,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="bytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SwapUsage" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="SwapUsage" metrickeyid="SwapUsage" agentname="Amazon Instance Monitor" metricsimpledisplayname="SwapUsage" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="bytes" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="bytes" groupingvalue="" id="55fcc1c5-d928-4b1c-b035-2cb68069482b" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="FreeableMemory" sourcecolor="RGB(128,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="bytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="FreeableMemory" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="FreeableMemory" metrickeyid="FreeableMemory" agentname="Amazon Instance Monitor" metricsimpledisplayname="FreeableMemory" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="bytes" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@e4f461" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Amazon Cloud" id="68ae2d85-ae48-44e8-8b39-728786cadf0f" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Storage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="6" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="MeterChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition host="true" measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="bytes" groupingvalue="" id="6631a2d7-fe1b-41cb-968a-8379eb21fd92" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="FreeStorageSpace" sourcecolor="RGB(192,192,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="bytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="FreeStorageSpace" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="FreeStorageSpace" metrickeyid="FreeStorageSpace" agentname="Amazon Instance Monitor" metricsimpledisplayname="FreeStorageSpace" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="bytes" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="bytes" groupingvalue="" id="8ef11427-bb32-45b0-8f97-225fe942906a" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="BinLogDiskUsage" sourcecolor="RGB(192,192,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Amazon Cloud" groupingcriterion="AgentHost" displayrate="10s" systemid="Amazon Cloud" unit="bytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="BinLogDiskUsage" metricgroupkey="Amazon RDS Metrics" collector="" systemid="Amazon Cloud" application="" agenthost="" parentkeyid="BinLogDiskUsage" metrickeyid="BinLogDiskUsage" agentname="Amazon Instance Monitor" metricsimpledisplayname="BinLogDiskUsage" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Amazon Instance Monitor" measureunit="bytes" monitorscheduleid="Amazon Instance Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
