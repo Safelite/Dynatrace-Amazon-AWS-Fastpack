@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 3.2.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor.config" name="Amazon CloudWatch Monitor">
+    <information>
+      <category value="" />
+      <description value="This plug-in queries the Amazon CloudWatch API to retrieve performance statistics" />
+    </information>
+    <configuration>
+      <property key="accessKeyID" label="accessKeyID" type="string" description="Amazon EC2 AccessKeyID" default="" />
+      <property key="secretAccessKey" label="secretAccessKey" type="string" description="Amazon EC2 Secret Access Key" default="" />
+      <property key="httpProxy" label="HTTP Proxy" type="string" description="Proxy needed for HTTP Calls" default="" />
+      <property key="httpProxyPort" label="HTTP Proxy Port" type="long" description="Proxy Port needed for HTTP Calls" default="" />
+      <property key="region" label="Amazon Regional Zone" type="string" description="The amazon region. default is us-east-1" default="" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitor" id="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor" name="Amazon CloudWatch Monitor">
+    <plugin configid="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor.config" class="com.dynatrace.diagnostics.plugin.cloud.amazon.CloudWatchMonitor" />
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugin.cloud.amazon.metrics.instance" name="Amazon EC2 Instance Metrics">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor">
+      <metric
+            description="CPU Utilization"
+            name="CPUUtilization"
+            unit="percent">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      <metric name="NetworkIn" unit="bytes" description="Incoming Network Traffic in Bytes" >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric  name="NetworkOut" unit="bytes" description="Outgoing Network Traffic in Bytes" >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric  name="DiskReadBytes" unit="bytes" description="Disk Read in Bytes" >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric
+            
+            description="Disk Read Operations"
+            name="DiskReadOps"
+            unit="number">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric  name="DiskWriteBytes" unit="bytes" description="Disk Write in Bytes" >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric
+            
+            description="Disk Write Operations"
+            name="DiskWriteOps"
+            unit="number">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EC2">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugin.cloud.amazon.metrics.elb" name="Amazon Elastic Load Balancer Metrics">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor">
+      <metric  name="HealthyHostCount" unit="number" description="The number of healthy Amazon EC2 instances registered with the load balancer in a specified Availability Zone. Hosts that have not failed more health checks than the value of the unhealthy threshold are considered healthy. When evaluating this metric, the dimensions must be provided for LoadBalancerName and AvailabilityZone. The metric represents the count of healthy instances in the specified Availability Zone. Instances may become unhealthy due to connectivity issues, health checks returning non-200 responses (in the case of HTTP or HTTPS health checks), or timeouts when performing the health check. To get the total count of all healthy hosts, this metric must be retrieved for each registered Availability Zone and then all the metrics need to be added together." >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/ELB">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Minimum">
+         </property>
+      </metric>
+      <metric  name="UnHealthyHostCount" unit="number" description="The number of unhealthy Amazon EC2 instances registered with the load balancer in a specified Availability Zone. Hosts that have failed more health checks than the value of the unhealthy threshold are considered unhealthy. When evaluating this metric, the dimensions must be provided for LoadBalancerName and AvailabilityZone. The metric represents the count of unhealthy instances in the specified Availability Zone. Instances may become unhealthy due to connectivity issues, health checks returning non-200 responses (in the case of HTTP or HTTPS health checks), or timeouts when performing the health check. To get the total count of all unhealthy hosts, this metric must be retrieved for each registered Availability Zone and then all the metrics need to be added together." >
+      <property
+               key="Namespace"
+               optional="false"
+               value="AWS/ELB">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Maximum">
+         </property>
+      </metric>
+      <metric  name="Latency" unit="s" description="Time elapsed after the load balancer receives a request until it receives the corresponding response." >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/ELB">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+
+
+      <metric  name="RequestCount" unit="number" description="The number of requests handled by the load balancer." >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/ELB">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric  name="HTTPCode_ELB_4XX" unit="number" description="Count of HTTP response codes generated by Elastic Load Balancing that are in the 4xx (client error) series." >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/ELB">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+      <metric  name="HTTPCode_ELB_5XX" unit="number" description="Count of HTTP response codes generated by Elastic Load Balancing that are in the 5xx (server error) series. Elastic Load Balancing may generate 5xx errors if no back-end instances are registered, no healthy back-end instances, or the request rate exceeds Elastic Load Balancing’s current available " >
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/ELB">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+    </metricgroup>
+  </extension>
+  																			
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugin.cloud.amazon.metrics.rds" name="Amazon RDS Metrics">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor">
+      <metric
+            
+            description="The amount of disk space occupied by binary logs on the master"
+            name="BinLogDiskUsage"
+            unit="bytes">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+       </metric>    
+      <metric
+            description="CPU Utilization"
+            name="CPUUtilization"
+            unit="percent">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+         </metric>
+      <metric
+            description="The number of database connections in use."
+            name="DatabaseConnections"
+            unit="number">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Maximum">
+         </property>
+      </metric>
+      <metric
+            description="The amount of available random access memory."
+            name="FreeableMemory"
+            unit="bytes">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Minimum">
+         </property>
+      </metric>
+       <metric
+            description="The amount of available storage space."
+            name="FreeStorageSpace"
+            unit="bytes">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Minimum">
+         </property>
+      </metric>
+       <metric
+            description="The amount of time a Read Replica DB Instance lags behind the source DB Instance."
+            name="ReplicaLag"
+            unit="s">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      <metric
+            description="The amount of swap space used on the DB Instance."
+            name="SwapUsage"
+            unit="bytes">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      <metric
+            description="The average number of disk I/O operations per second."
+            name="ReadIOPS"
+            unit="number">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      <metric
+            description="The average number of disk I/O operations per second."
+            name="WriteIOPS"
+            unit="number">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      
+       <metric
+            description="The average amount of time taken per disk I/O operation."
+            name="ReadLatency"
+            unit="s">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+       <metric
+            description="The average amount of time taken per disk I/O operation."
+            name="WriteLatency"
+            unit="s">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      
+      <metric
+            description="The average number of bytes read from disk per second."
+            name="ReadThroughput"
+            unit="bytes">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+      <metric
+            description="The average number of bytes read from disk per second."
+            name="WriteThroughput"
+            unit="bytes">
+         <property
+               key="Namespace"
+               optional="false"
+               value="AWS/RDS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+    </metricgroup>
+  </extension>
+  
+  
+  <extension
+        id="com.dynatrace.diagnostics.plugin.cloud.amazon.metrics.volume"
+        name="Amazon EC2 EBS Volume"
+        point="com.dynatrace.diagnostics.pdk.monitormetricgroup">
+     <metricgroup
+           monitorid="com.dynatrace.diagnostics.plugin.cloud.amazon.monitor">
+        <metric
+              
+              description="The total number of seconds spent by all operations that completed in the period. If multiple requests are submitted at the same time, this total could be greater than the length of the period. For example, say the period is 5 minutes (300 seconds); if 700 operations completed during that period, and each operation took 1 second, the value would be 700 seconds. "
+              name="VolumeTotalWriteTime"
+              unit="s">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+        <metric
+              
+              description="The total number of seconds spent by all operations that completed in the period. If multiple requests are submitted at the same time, this total could be greater than the length of the period. For example, say the period is 5 minutes (300 seconds); if 700 operations completed during that period, and each operation took 1 second, the value would be 700 seconds. "
+              name="VolumeTotalReadTime"
+              unit="s">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+        <metric
+              
+              description="The total number of seconds in the period when no read or write operations were submitted."
+              name="VolumeIdleTime"
+              unit="s">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+        <metric
+              
+              description="The number of read and write operation requests waiting to be completed in the period."
+              name="VolumeQueueLength"
+              unit="number">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Average">
+         </property>
+      </metric>
+        <metric
+              
+              description="Volume Read Volume in Bytes"
+              name="VolumeReadBytes"
+              unit="bytes">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+        <metric
+              
+              description="Volume Read Operations"
+              name="VolumeReadOps"
+              unit="number">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+        <metric
+              
+              description="Volume Write in Bytes"
+              name="VolumeWriteBytes"
+              unit="bytes">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+        <metric
+              
+              description="Volume Write Operations"
+              name="VolumeWriteOps"
+              unit="number">
+		<property
+               key="Namespace"
+               optional="false"
+               value="AWS/EBS">
+         </property>
+         <property
+               key="Statistics"
+               optional="false"
+               value="Sum">
+         </property>
+      </metric>
+     </metricgroup>
+  </extension>
+  <!--extension
+        id="com.dynatrace.cloud.amazon.monitor.metrics.cost"
+        name="Instance Usage and Cost"
+        point="com.dynatrace.diagnostics.pdk.monitormetricgroup">
+     <metricgroup
+           monitorid="com.dynatrace.cloud.amazon.monitor">
+        <metric
+              
+              description="total cost of running this instance"
+              name="TotalInstanceCost"
+              unit="number">
+        </metric>
+        <metric
+              
+              description="Current Hourly Cost"
+              name="CurrentInstanceCost"
+              unit="number">
+        </metric>
+        <metric
+              
+              description="The total cost of the volumes attached to this instance"
+              name="TotalInstanceVolumeCost"
+              unit="number">
+        </metric>
+        <metric
+              
+              description="TotalIstanceVolumeUsageCost"
+              name="TotalInstanceVolumeUsageCost"
+              unit="number">
+        </metric>
+        <metric
+              description="Will report a cost whenever 1 million I/O requests is reached"
+              name="CurrentInstanceVolumeUsageCost"
+              unit="number">
+        </metric>
+        <metric
+              description="Will report a cost whenever 1 million I/O requests is reached"
+              name="CurrentInstanceVolumeCost"
+              unit="number">
+        </metric>
+        <metric
+              
+              description="Total Hours"
+              name="TotalHours"
+              unit="number">
+        </metric>
+        <metric
+              description="Total Hours"
+              name="GB-Months"
+              unit="number">
+        </metric>
+        <metric
+              description="Total Hours"
+              name="CurrentProvisionedVolumeSize"
+              unit="number">
+        </metric>
+     </metricgroup
+  </extension>-->
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.cloud.amazon.ec2.instanceAction" name="Amazon EC2 Instance Action">
+    <information>
+      <category value="" />
+      <description value="This action is used to start or stop Amazon EC2 instances" />
+    </information>
+    <configuration>
+      <property key="accessKeyID" label="accessKeyID" type="string" description="Amazon EC 2 AccessKeyID" default="" />
+      <property key="secretAccessKey" label="secretAccessKey" type="string" description="Amazon EC2 SecretAccessKey" default="" />
+      <property key="loadBalancerName" label="loadBalancerName" type="string" description="The loadbalancer to which to add or remove the instance. " default="" />
+      <property key="actionType" label="actionType" type="list" description="Specify whether to start or stop an instance" default="start">
+        <list>
+          <item value="start" />
+          <item value="stop" />
+        </list>
+      </property>
+      <property key="amiName" label="amiName" type="string" description="The name of the Amazon EC2 AMI to start or stop" default="" />
+      <property key="keyName" label="keyName" type="string" description="The name of the key to be used" default="" />
+      <property key="instances" label="instances" type="long" description="The number of instances to start or stop" default="1" />
+      <property key="securityGroups" label="securityGroups" type="string" description="The security groups to assign to this instance. Seperate values by commas." default="" />
+      <property key="enableMonitoring" label="enableMonitoring" type="boolean" description="Defines whether cloud watch monitoring should be enabled (start only)" default="true" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.dynatrace.cloud.amazon.ec2.instanceAction.action" name="Amazon EC2 Instance Action">
+    <plugin configid="com.dynatrace.cloud.amazon.ec2.instanceAction" class="com.dynatrace.cloud.amazon.ec2.InstanceAction" />
+  </extension>  
+</plugin>
+
